@@ -1,4 +1,4 @@
-# ch02
+# ch02 OpenCV-Python 기초 사용법
 
 01 img_info.py : 영상의 속성과 픽셀 값 처리
 
@@ -9,3 +9,7 @@
 04 drawing.py : OpenCV 그리기 함수
 
 05 camera_in.py : 카메라와 동영상 처리하기1
+
+06 video_out.py : 카메라와 동영상 처리하기 2
+
+07 keyboard.py : 키보드 이벤트 처리하기

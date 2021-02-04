@@ -1,1 +1,1 @@
-# OpenCV-Python 시작하기
+# ch01 OpenCV-Python 시작하기
