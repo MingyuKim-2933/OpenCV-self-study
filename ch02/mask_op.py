@@ -20,10 +20,10 @@ import sys
 import cv2
 
 # 마스크 영상을 이용한 영상 합성
-src = cv2.imread('airplane.bmp', cv2.IMREAD_COLOR)
-mask = cv2.imread('mask_plane.bmp', cv2.IMREAD_GRAYSCALE)  # 마스크는 무조건 GRAYSCALE이여야 함
-dst = cv2.imread('field.bmp', cv2.IMREAD_COLOR)
-dst2 = cv2.imread('field.bmp', cv2.IMREAD_COLOR)
+src = cv2.imread('img/airplane.bmp', cv2.IMREAD_COLOR)
+mask = cv2.imread('img/mask_plane.bmp', cv2.IMREAD_GRAYSCALE)  # 마스크는 무조건 GRAYSCALE이여야 함
+dst = cv2.imread('img/field.bmp', cv2.IMREAD_COLOR)
+dst2 = cv2.imread('img/field.bmp', cv2.IMREAD_COLOR)
 
 cv2.copyTo(src, mask, dst)  # src, mask, dst는 모두 사이즈가 같아야 함, src와 dst는 타입이 같아야 함.
 
@@ -35,7 +35,7 @@ cv2.copyTo(src, mask, dst)  # src, mask, dst는 모두 사이즈가 같아야 �
 
 # --------------------------------------------
 
-src2 = cv2.imread('opencv-logo-white.png', cv2.IMREAD_UNCHANGED)  # 알파채널이 포함된 사진은 cv2.IMREAD_UNCHANGED를 사용해야 한다.
+src2 = cv2.imread('img/opencv-logo-white.png', cv2.IMREAD_UNCHANGED)  # 알파채널이 포함된 사진은 cv2.IMREAD_UNCHANGED를 사용해야 한다.
 mask2 = src2[:, :, -1]  # 슬라이싱 부분을 잘 모르겠음.. 스터디 때 질문하기
 src2 = src2[:, :, 0:3]
 h, w = src2.shape[:2]
