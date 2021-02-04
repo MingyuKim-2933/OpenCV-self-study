@@ -1,5 +1,5 @@
 '''
-영상의 생성, 복사, 부분 영상 추출
+02 영상의 생성, 복사, 부분 영상 추출
 numpy.empty(shape, dtype=float, ...) -> arr
 numpy.zeros(shape, dtype=float, ...) -> arr
 numpy.ones(shape, dtype=float, ...) -> arr

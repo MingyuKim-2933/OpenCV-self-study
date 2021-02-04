@@ -1,5 +1,5 @@
 '''
-영상의 속성과 픽셀 값 참조
+01 영상의 속성과 픽셀 값 처리
 OpenCV는 영상 데이터를 numpy.ndarray로 표현
 
 ndim: 차원 수. 2 = grayscale, 3 = color, 4 = alpha 값이 포함된 color
