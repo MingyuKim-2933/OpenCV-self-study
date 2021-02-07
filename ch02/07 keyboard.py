@@ -1,7 +1,7 @@
 '''
 07 키보드 이벤트 처리하기
 키보드 입력 대기 함수
-cv2.waitKey(delay=None) ->retval
+cv2.waitKey(delay=None) -> retval
 - delay: 밀리세컨드 단위 대기 시간. delay<=0이면 무한히 기다림. default는 0
 - retval: 눌린 키 값(ASCII code). 키가 눌리지 않으면 -1.
 
@@ -16,7 +16,7 @@ cv2.waitKey(delay=None) ->retval
 키보드 특수키 입력 처리하기
 - Windows 운영체제에서 방향키, 함수키(Insert, Delete, F12) 등의 특수키 입력은 cv2.waitKeyEx() 함수 사용
 '''
-import cv2, sys
+import cv2,sys
 
 img =cv2.imread('img/cat.bmp', cv2.IMREAD_GRAYSCALE)
 
