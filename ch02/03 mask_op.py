@@ -37,7 +37,7 @@ cv2.copyTo(src, mask, dst)  # src, mask, dst는 모두 사이즈가 같아야 �
 # --------------------------------------------
 
 src2 = cv2.imread('img/opencv-logo-white.png', cv2.IMREAD_UNCHANGED)  # 알파채널이 포함된 사진은 cv2.IMREAD_UNCHANGED를 사용해야 한다.
-mask2 = src2[:, :, -1]  # 슬라이싱 부분을 잘 모르겠음.. 스터디 때 질문하기
+mask2 = src2[:, :, -1] 
 src2 = src2[:, :, 0:3]
 h, w = src2.shape[:2]
 crop = dst[0:h, 0:w]  # crop을 변경하면서 dst도 함께 변경된다. ( .copy()를 안썼기 때문에)
