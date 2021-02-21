@@ -99,4 +99,4 @@ cv2.bitwise_not(src1, src2, dst=None, mask=None) -> dst
 - mask: 마스크 영상  
 
 참고사항  
--각각의 픽셀 값을 이진수로 표현하고, 비트(bit)단위 논리 연산을 수행  
+- 각각의 픽셀 값을 이진수로 표현하고, 비트(bit)단위 논리 연산을 수행  
