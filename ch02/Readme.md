@@ -1,6 +1,6 @@
 # ch02 OpenCV-Python 기초 사용법
 
-## 01 img_info.py : 영상의 속성과 픽셀 값 처리
+## [01 img_info.py : 영상의 속성과 픽셀 값 처리](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02/01%20img_info.py)
 01 영상의 속성과 픽셀 값 처리<br>
 OpenCV는 영상 데이터를 numpy.ndarray로 표현 <br>
 ndim: 차원 수. 2 = grayscale, 3 = color, 4 = alpha 값이 포함된 color <br>
