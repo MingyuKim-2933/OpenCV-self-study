@@ -1,6 +1,6 @@
 # ch02 OpenCV-Python 기초 사용법
 
-01 img_info.py : 영상의 속성과 픽셀 값 처리
+h1 01 img_info.py : 영상의 속성과 픽셀 값 처리
 
 02 img_ops.py : 영상의 생성, 복사, 부분 영상 추출
 
