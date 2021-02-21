@@ -19,15 +19,15 @@ numpy.zeros(shape, dtype=float, ...) -> arr
 numpy.ones(shape, dtype=float, ...) -> arr  
 numpy.full(shape, fill_value, dtype=None, ...) -> arr  
 
-shape: 각 차원의 크기. (h, w) 또는 (h, w, 3) 등이 있다.  
-dtype: 원소의 데이터 타입. 일반적인 영상이면 numpy.uint8지정  
-arr: 생성된 영상  
+- shape: 각 차원의 크기. (h, w) 또는 (h, w, 3) 등이 있다.  
+- dtype: 원소의 데이터 타입. 일반적인 영상이면 numpy.uint8지정  
+- arr: 생성된 영상  
 
-- 참고사항   
-numpy.empty() 함수는 임의의 값으로 초기화된 배열을 생성  
-numpy.zeros() 함수는 0으로 초기화된 배열을 생성  
-numpy.ones() 함수는 1로 초기화된 배열을 생성  
-numpy.full() 함수는 fill_value로 초기화된 배열을 생성  
+참고사항   
+- numpy.empty() 함수는 임의의 값으로 초기화된 배열을 생성  
+- numpy.zeros() 함수는 0으로 초기화된 배열을 생성  
+- numpy.ones() 함수는 1로 초기화된 배열을 생성  
+- numpy.full() 함수는 fill_value로 초기화된 배열을 생성  
 
 ## [03 mask_op.py : 마스크 연산과 ROI](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02/03%20mask_op.py)
 03 마스크 연산과 ROI  
