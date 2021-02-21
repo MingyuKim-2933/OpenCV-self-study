@@ -112,7 +112,7 @@ cv2.VideoWriter.open(filename, fourcc, fps, frameSize, isColor=None) -> retval
 cv2.waitKey(delay=None) -> retval  
 - delay: 밀리세컨드 단위 대기 시간. delay<=0이면 무한히 기다림. default는 0  
 - retval: 눌린 키 값(ASCII code). 키가 눌리지 않으면 -1.  
-- 
+
 참고 사항  
 - cv2.waitKey() 함수는 OpenCV 창이 하나라도 있을 때 동작함  
 - 특정 키 입력을 확인하려면 ord()함수를 이용  
@@ -120,7 +120,7 @@ cv2.waitKey(delay=None) -> retval
         if cv2.waitKey() == ord('q'):  
             break  
 - 주요 특수키 코드: 27(ESC), 13(ENTER), 9(TAB)  
-- 
+
 키보드 특수키 입력 처리하기  
 - Windows 운영체제에서 방향키, 함수키(Insert, Delete, F12) 등의 특수키 입력은 cv2.waitKeyEx() 함수 사용  
 
