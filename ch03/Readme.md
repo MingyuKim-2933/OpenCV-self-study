@@ -214,3 +214,42 @@ cv2.normalize(src, dst, alpha=None, beta, None, norm_type=None, dtype=None, mask
 
 히스토그램 스트레칭 변환 함수  
 (f(x, y) -G(min)) / (G(max) - G(min)) * 255  # 변환 함수의 직선의 방정식
+
+## [06 equalize.py : 히스토그램 평활화](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03/equalize.py)
+06 히스토그램 평활화
+
+히스토그램 평활화(Histogram equalization)  
+- 히스토그램이 그레이스케일 전체 구간에서 균일한 분포로 나타나도록 변경하는 명암비 향상 기법
+- 히스토그램 균등화, 균일화, 평탄화
+
+히스토그램 평활화를 위한 변환 함수 구하기  
+- 변환 함수 : dst(x, y) = round(cdf(src(x, y)) * L(max))  # 누적 분포 함수(cdf)를 사용해서 구한다.
+
+히스토그램 평활화  
+cv2.equalizeHist(src, dst=None) -> dst
+- src: 입력 영상. 그레이스케일 영상
+- dst: 결과 영상
+
+컬러 히스토그램 평활화  
+- 직관적 방법: R, G, B 각 색 평면에 대해 히스토그램 평활화  
+- (입력)컬러 영상 -> (R,G,B) plane 분할 -> 각각 히스토그램 평활화 -> merge -> (출력)컬러 영상  # 이 방법은 색감이 바껴 좋지 않아 이렇게 하면 안된다.  
+- (입력)컬러 영상 -> (Y,Cr,Cb) plane 분할 -> Y값만 히스토그램 평활화 -> merge -> (출력)컬러 영상  # 색감은 유지되면서 명암비만 증가되어 원하는 결과를 얻을 수 있다.
+
+## [07 inrange.py : 특정 색상 영역 추출](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03/inrange.py)
+07 특정 색상 영역 추출
+
+RGB 색 공간에서 특정 색상 영역을 추출하기 보다 HSV, YCrCb 공간에서 특정 색상 영역 추출을 많이한다.
+
+HSV 색 공간에서 녹색 영역 추출하기
+- H(Hue): 색상의 종류 (색상) (0 ~ 179)
+- S(Saturation): 색상의 채도 (선명도) (0 ~ 255) (어느정도 값을 높게 설정해야한다. ex.150 < S < 255)
+- V(Value): 색상의 명도 (밝기) (0 ~ 255)
+
+특정 범위 안에 있는 행렬 원소 검출
+cv2.inRange(src, lowerb, upperb, dst=None) -> dst (mask 영상: 0 또는 255로만 구성된 이진 영상)
+- src: 입력 행렬
+- lowerb: 하한 값 행렬 또는 스칼라
+- upperb: 상한 값 행렬 또는 스칼라
+- dst: 입력 영상과 같은 크기의 마스크 영상. 범위 안에 들어가는 픽셀은 255, 나머지는 0으로 설정. (numpy.uint8)
+
+## [08 backproj.py : 히스토그램 역투영](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03/backproj.py)
