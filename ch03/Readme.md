@@ -161,7 +161,7 @@ cv2.CV_8U 영상의 경우
 - 0<=Cr<=255  
 - 0<=Cb<=255  
 
-## [04 histogram1.py : 히스토그램 분석](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03/histogram.py)
+## [04 histogram.py : 히스토그램 분석](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03/histogram.py)
 04 히스토그램 분석
 
 히스토그램(Histogram)
