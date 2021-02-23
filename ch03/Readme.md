@@ -160,3 +160,57 @@ cv2.CV_8U 영상의 경우
 - 0<=Y<=255  
 - 0<=Cr<=255  
 - 0<=Cb<=255  
+
+## [04 histogram1.py : 히스토그램 분석](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03/histogram.py)
+04 히스토그램 분석
+
+히스토그램(Histogram)
+- 영상의 픽셀 값 분포를 그래프의 형태로 표현한 것
+- 예를 들어 그레이스케일 영상에서 각 그레이스케일 값에 해당하는 픽셀의 개수를 구하고, 이를 막대 그래프의 형태로 표현
+
+정규화된 히스토그램(Normalized histogram)
+- 각 픽셀의 개수를 영상 전체 픽셀 개수로 나누어준 것
+- 해당 그레이스케일 값을 갖는 픽셀이 나타날 확률
+
+히스토그램 구하기  
+cv2.calcHist(images, channels, mask, histSize, ranges, hist=None, accumulate=None) -> hist
+- images: 입력 영상 리스트 (1개의 영상이라도 리스트로 묶어서 입력 값으로 주어야한다.)
+- channels: 히스토그램을 구할 채널을 나타내는 리스트
+- mask: 마스크 영상. 입력 영상 전체에서 히스토그램을 구하려면 None 지정.
+- histSize: 히스토그램 각 차원의 크기(빈(bin)의 개수)를 나타내는 리스트
+- ranges: 히스토그램 각 차원의 최솟값과 최댓값으로 구성된 리스트
+- hist: 계산된 히스토그램 (numpy.ndarray 형태로 반환된다.)
+- accumulate: 기존의 hist 히스토그램에 누적하려면 True, 새로 만들려면 False.
+
+## [05 contrast.py : 영상의 명암비 조절](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03/contrast.py)
+05 영상의 명암비 조절
+
+명암비(Contrast)란?
+- 밝은 곳과 어두운 곳 사이에 드러나는 밝기 정도의 차이
+- 컨트라스트, 대비
+- 명암비가 높으면 밝은 부분과 어두운 부분의 픽셀 값의 차이가 커서 조금 더 선명해보인다.
+
+기본적인 명암비 조절 함수  
+dst(x, y) = saturate(s·src(x, y))
+- s = 0.5인 경우 : 최대 픽셀 값이 128이라 전체적으로 어두워 진다.
+- s = 2인 경우 : 전체적으로 255가 되는 부분이 많아서 하얗게 보이는 부분이 많다.
+
+효과적인 명암비 조절 함수  
+dst(x, y) = saturate(src(x, y) + (src(x, y) - 128)·α)
+(1 + α) * src(x, y) - 128 * α  # 위의 식과 같다.
+
+히스토그램 스트레칭(Histogram stretching)
+- 영상의 히스토그램이 그레이스케일 전 구간에서 걸쳐 나타나도록 변경하는 선형 변환 기법 (양쪽으로 늘려주는 과정에서 중간 중간 픽셀 값이 없는 구간이 생긴다.)
+
+정규화 함수  
+cv2.normalize(src, dst, alpha=None, beta, None, norm_type=None, dtype=None, mask=None) -> dst
+- src: 입력 영상
+- dst: 결과 영상 (스트레칭에서는 None 값으로 주면 된다.)
+- alpha: (노름 정규화인 경우) 목표 노름 값, (원소 값 범위 정규화인 경우) 최솟값
+- beta: (원소 값 범위 정규화인 경우) 최댓값
+- norm_type: 정규화 타입. NORM_INF, NORM_L1, NORM_L2, NORM_MINMAX.  # NORM_MINMAX를 선택한 후 alpha에 0 beta에 255를 대입한다.
+- dtype: 결과 영상의 타입
+- mask: 마스크 영상
+
+히스토그램 스트레칭 변환 함수  
+(f(x, y) -G(min)) / (G(max) - G(min)) * 255  # 변환 함수의 직선의 방정식
