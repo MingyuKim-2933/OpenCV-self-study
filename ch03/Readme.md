@@ -253,3 +253,40 @@ cv2.inRange(src, lowerb, upperb, dst=None) -> dst (mask 영상: 0 또는 255로�
 - dst: 입력 영상과 같은 크기의 마스크 영상. 범위 안에 들어가는 픽셀은 255, 나머지는 0으로 설정. (numpy.uint8)
 
 ## [08 backproj.py : 히스토그램 역투영](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03/backproj.py)
+08 히스토그램 역투영
+
+히스토그램 역투영(Histogram backprojection)
+- 영상의 각 픽셀이 주어진 히스토그램 모델에 얼마나 일치하는지를 검사하는 방법
+- 임의의 색상 영역을 검출할 때 효과적(inrange 함수보다 임의의 색상 영역을 검출한다. e.x. 살색)
+- YCrCb 컬러 스페이스와 LAB를 많이 쓴다.
+
+히스토그램 역투영을 이용한 살색 검출
+1) 기준 영상으로부터 살색에 대한 컬러 히스토그램을 미리 계산
+2) 입력 영상에서 미리 구한 살색 히스토그램에 부합하는 픽셀을 선별
+
+히스토그램 역투영 함수  
+cv2.calcBackProject(images, channels, hist, ranges, scale, dst=None) -> dst
+- images: 입력 영상 리스트
+- channels: 역투영 계산에 사용할 채널 번호 리스트
+- hist: 입력 히스토그램(numpy.ndarray)
+- ranges: 히스토그램 각 차원의 최솟값과 최댓값으로 구성된 리스트
+- scale: 출력 역투영 행렬에 추가적으로 곱할 값
+- dst: 출력 역투영 영상. 입력 영상과 동일 크기, cv2.CV_8U.
+
+## [09 chroma_key.py : 크로마 키 합성](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03/chroma_key.py)
+09 크로마 키 합성
+
+크로마 키(Chroma key) 합성이란?
+- 녹색 또는 파란색 배경에서 촬영한 영상에 다른 배경 영상을 합성하는 기술
+
+구현 할 기능
+- 녹색 스크린 영역 추출하기
+- 녹색 영역에 다른 배경 영상을 합성하여 저장하기
+- 스페이스바를 이용하여 크로마 키 합성 동작 제어하기
+
+녹색 스크린 영역 추출하기
+- 크로마 키 영상을 HSV 색 공간으로 변환
+- cv2.inRange()함수를 사용하여 50<=H<=80, 150 <=S<=255, 0<=V<=255 범위의 영역을 검출
+
+녹색 영역에 다른 배경 영상을 합성하기
+- 마스크 연산을 지원하는 cv2.copyTo()함수 사용
