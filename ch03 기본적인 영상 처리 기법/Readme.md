@@ -1,6 +1,6 @@
 # ch03 기본적인 영상 처리 기법
 
-## [01 brightness.py : 영상의 밝기 조절](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03/brightness.py)
+## [01 brightness.py : 영상의 밝기 조절](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03%20기본적인%20영상%20처리%20기법/brightness.py)
 01 영상의 밝기 조절  
 
 영상의 화소 처리 기법  
@@ -27,7 +27,7 @@ cv2.add(src1, src2, dst=None, mask=None, dtype=None) -> dst
 - 스칼라는 실수 값 하나 또는 실수 값 네 개로 구성된 튜플  
 - dst를 함수 인자로 전달하려면 dst의 크기가 src1, src2와 같아야 하며, 타입이 적절해야함  
 
-## [02 arithmetic.py : 영상의 산술 및 논리 연산](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03/arithmetic.py) 
+## [02 arithmetic.py : 영상의 산술 및 논리 연산](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03%20기본적인%20영상%20처리%20기법/arithmetic.py) 
 02 영상의 산술 연산  
 
 1) 덧셈 연산  
@@ -101,7 +101,7 @@ cv2.bitwise_not(src1, src2, dst=None, mask=None) -> dst
 참고사항  
 - 각각의 픽셀 값을 이진수로 표현하고, 비트(bit)단위 논리 연산을 수행  
 
-## [03 color1.py : 컬러 영상과 색 공간](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03/color1.py) 
+## [03 color.py : 컬러 영상과 색 공간](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03%20기본적인%20영상%20처리%20기법/color1.py) 
 03 컬러 영상과 색 공간
 
 OpenCV와 컬러 영상  
@@ -161,7 +161,7 @@ cv2.CV_8U 영상의 경우
 - 0<=Cr<=255  
 - 0<=Cb<=255  
 
-## [04 histogram.py : 히스토그램 분석](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03/histogram.py)
+## [04 histogram.py : 히스토그램 분석](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03%20기본적인%20영상%20처리%20기법/histogram.py)
 04 히스토그램 분석
 
 히스토그램(Histogram)
@@ -182,7 +182,7 @@ cv2.calcHist(images, channels, mask, histSize, ranges, hist=None, accumulate=Non
 - hist: 계산된 히스토그램 (numpy.ndarray 형태로 반환된다.)
 - accumulate: 기존의 hist 히스토그램에 누적하려면 True, 새로 만들려면 False.
 
-## [05 contrast.py : 영상의 명암비 조절](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03/contrast.py)
+## [05 contrast.py : 영상의 명암비 조절](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03%20기본적인%20영상%20처리%20기법/contrast.py)
 05 영상의 명암비 조절
 
 명암비(Contrast)란?
@@ -215,7 +215,7 @@ cv2.normalize(src, dst, alpha=None, beta, None, norm_type=None, dtype=None, mask
 히스토그램 스트레칭 변환 함수  
 (f(x, y) -G(min)) / (G(max) - G(min)) * 255  # 변환 함수의 직선의 방정식
 
-## [06 equalize.py : 히스토그램 평활화](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03/equalize.py)
+## [06 equalize.py : 히스토그램 평활화](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03%20기본적인%20영상%20처리%20기법/equalize.py)
 06 히스토그램 평활화
 
 히스토그램 평활화(Histogram equalization)  
@@ -235,7 +235,7 @@ cv2.equalizeHist(src, dst=None) -> dst
 - (입력)컬러 영상 -> (R,G,B) plane 분할 -> 각각 히스토그램 평활화 -> merge -> (출력)컬러 영상  # 이 방법은 색감이 바껴 좋지 않아 이렇게 하면 안된다.  
 - (입력)컬러 영상 -> (Y,Cr,Cb) plane 분할 -> Y값만 히스토그램 평활화 -> merge -> (출력)컬러 영상  # 색감은 유지되면서 명암비만 증가되어 원하는 결과를 얻을 수 있다.
 
-## [07 inrange.py : 특정 색상 영역 추출](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03/inrange.py)
+## [07 inrange.py : 특정 색상 영역 추출](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03%20기본적인%20영상%20처리%20기법/inrange.py)
 07 특정 색상 영역 추출
 
 RGB 색 공간에서 특정 색상 영역을 추출하기 보다 HSV, YCrCb 공간에서 특정 색상 영역 추출을 많이한다.
@@ -252,7 +252,7 @@ cv2.inRange(src, lowerb, upperb, dst=None) -> dst (mask 영상: 0 또는 255로�
 - upperb: 상한 값 행렬 또는 스칼라
 - dst: 입력 영상과 같은 크기의 마스크 영상. 범위 안에 들어가는 픽셀은 255, 나머지는 0으로 설정. (numpy.uint8)
 
-## [08 backproj.py : 히스토그램 역투영](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03/backproj.py)
+## [08 backproj.py : 히스토그램 역투영](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03%20기본적인%20영상%20처리%20기법/backproj.py)
 08 히스토그램 역투영
 
 히스토그램 역투영(Histogram backprojection)
@@ -273,7 +273,7 @@ cv2.calcBackProject(images, channels, hist, ranges, scale, dst=None) -> dst
 - scale: 출력 역투영 행렬에 추가적으로 곱할 값
 - dst: 출력 역투영 영상. 입력 영상과 동일 크기, cv2.CV_8U.
 
-## [09 chroma_key.py : 크로마 키 합성](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03/chroma_key.py)
+## [09 chroma_key.py : 크로마 키 합성](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03%20기본적인%20영상%20처리%20기법/chroma_key.py)
 09 크로마 키 합성
 
 크로마 키(Chroma key) 합성이란?
