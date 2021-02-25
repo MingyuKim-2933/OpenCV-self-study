@@ -101,7 +101,7 @@ cv2.bitwise_not(src1, src2, dst=None, mask=None) -> dst
 참고사항  
 - 각각의 픽셀 값을 이진수로 표현하고, 비트(bit)단위 논리 연산을 수행  
 
-## [03 color.py : 컬러 영상과 색 공간](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03%20기본적인%20영상%20처리%20기법/color1.py) 
+## [03 color.py : 컬러 영상과 색 공간](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch03%20기본적인%20영상%20처리%20기법/color.py) 
 03 컬러 영상과 색 공간
 
 OpenCV와 컬러 영상  
