@@ -1,6 +1,6 @@
 # ch02 OpenCV-Python 기초 사용법
 
-## [01 img_info.py : 영상의 속성과 픽셀 값 처리](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02/01%20img_info.py)
+## [01 img_info.py : 영상의 속성과 픽셀 값 처리](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02%20OpenCV_Python%20기초%20사용법/01%20img_info.py)
 01 영상의 속성과 픽셀 값 처리
 
 OpenCV는 영상 데이터를 numpy.ndarray로 표현  
@@ -13,7 +13,7 @@ dtype: 원소의 데이터 타입. 영상 데이터는 uint8(numpy에서 지원�
 그레이 스케일 영상 : cv2.CV_8UC1 -> numpy.uint8, shape = (h, w)  
 컬러 영상 : cv2.CV_8UC3 -> numpy.uint8, shape = (h, w, 3)  
 
-## [02 img_ops.py : 영상의 생성, 복사, 부분 영상 추출](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02/02%20img_ops.py)
+## [02 img_ops.py : 영상의 생성, 복사, 부분 영상 추출](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02%20OpenCV_Python%20기초%20사용법/02%20img_ops.py)
 02 영상의 생성, 복사, 부분 영상 추출  
 
 numpy.empty(shape, dtype=float, ...) -> arr  
@@ -31,7 +31,7 @@ numpy.full(shape, fill_value, dtype=None, ...) -> arr
 - numpy.ones() 함수는 1로 초기화된 배열을 생성  
 - numpy.full() 함수는 fill_value로 초기화된 배열을 생성  
 
-## [03 mask_op.py : 마스크 연산과 ROI](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02/03%20mask_op.py)
+## [03 mask_op.py : 마스크 연산과 ROI](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02%20OpenCV_Python%20기초%20사용법/03%20mask_op.py)
 03 마스크 연산과 ROI  
 
 ROI : Region of Interest, 관심 영역 -> 영상에서 특정 연산을 수행하고자 하는 임의의 부분 영역  
@@ -48,7 +48,7 @@ cv2.copyTo(src, mask, dst=None) -> dst
 - dst: 출력 영상. 만약 src와 크기 및 타입이 같은 dst를 입력으로 지정하면 dst를 새로 생성하지 않고 연산을 수행 is None:  
        그렇지 않으면 dst를 새로 생성하여 연산을 수행한 후 반환함.  
 
-## [04 drawing.py : OpenCV 그리기 함수](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02/04%20drawing.py)
+## [04 drawing.py : OpenCV 그리기 함수](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02%20OpenCV_Python%20기초%20사용법/04%20drawing.py)
 04 OpenCV 그리기 함수  
 
 - OpenCV는 영상에 선, 도형, 문자열을 출력하는 그리기 함수를 제공  
@@ -60,7 +60,7 @@ cv2.copyTo(src, mask, dst=None) -> dst
 - 그리기 알고리즘을 이용하여 영상의 픽셀 값 자체를 변경 -> 원본 영상이 필요하면 복사본을 만들어서 그리기 & 출력  
 - 그레이스케일 영상에는 컬러로 그리기 안 됨 -> cv2.cvtColor() 함수로 BGR 컬러 영상으로 변환한 후 그리기 함수 호출
   
-## [05 camera_in.py : 카메라와 동영상 처리하기1](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02/05%20camera_in.py)
+## [05 camera_in.py : 카메라와 동영상 처리하기1](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02%20OpenCV_Python%20기초%20사용법/05%20camera_in.py)
 05 카메라와 동영상 처리하기 1 
 
 cv2.VideoCapture 클래스 : OpenCV에서는 카메라와 동영상으로부터 프레임(frame)을 받아오는 작업을 cv2.VideoCapture 클래스 하나로 처리함  
@@ -88,7 +88,7 @@ cv2.VideoCapture.set(propID, value) -> retval
 - propId: 속성 상수. (e.g.) 프레임 가로, 세로 크기, 초당 프레임 수, 현재 프레임 번호 등등(OpenCV 공식 문서 참조)
 - retval: 성공하면 해당 속성 값, 실패하면 0.
 
-## [06 video_out.py : 카메라와 동영상 처리하기 2](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02/06%20video_out.py)
+## [06 video_out.py : 카메라와 동영상 처리하기 2](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02%20OpenCV_Python%20기초%20사용법/06%20video_out.py)
 06 카메라와 동영상 처리하기 2  
 
 cv2.VideoWriter 클래스 : OpenCV에서는 cv2.VideoWriter 클래스를 이용하여 일련의 프레임을 동영상 파일로 저장할 수 있음  
@@ -112,7 +112,7 @@ cv2.VideoWriter(filename, fourcc, fps, frameSize, isColor=None) -> retval
 cv2.VideoWriter.open(filename, fourcc, fps, frameSize, isColor=None) -> retval  
 - retval: 성공하면 True, 실패하면 False.  
 
-## [07 keyboard.py : 키보드 이벤트 처리하기](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02/07%20keyboard.py)
+## [07 keyboard.py : 키보드 이벤트 처리하기](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02%20OpenCV_Python%20기초%20사용법/07%20keyboard.py)
 07 키보드 이벤트 처리하기 
 
 키보드 입력 대기 함수  
@@ -131,7 +131,7 @@ cv2.waitKey(delay=None) -> retval
 키보드 특수키 입력 처리하기  
 - Windows 운영체제에서 방향키, 함수키(Insert, Delete, F12) 등의 특수키 입력은 cv2.waitKeyEx() 함수 사용  
 
-## [08 mouse.py : 마우스 이벤트 처리하기](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02/08%20mouse.py)
+## [08 mouse.py : 마우스 이벤트 처리하기](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02%20OpenCV_Python%20기초%20사용법/08%20mouse.py)
 08 마우스 이벤트 처리하기  
 
 마우스 이벤트 콜백함수 등록 함수  
@@ -146,7 +146,7 @@ onMouse(event, x, y, flags, param) -> None
 - flags: 마우스 이벤트 발생 시 상태. cv2.EVENT_FLAG_로 시작하는 상수  
 - param: cv2.setMouseCallback() 함수에서 설정한 데이터.  
 
-## [09 Trackbar.py : 트랙바 사용하기](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02/09%20Trackbar.py)
+## [09 Trackbar.py : 트랙바 사용하기](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02%20OpenCV_Python%20기초%20사용법/09%20Trackbar.py)
 09 트랙바 사용하기  
 
 트랙바 : 프로그램 동작 중 사용자가 지정한 범위 안의 값을 선택할 수 있는 컨트롤  
@@ -159,7 +159,7 @@ cv2.createTrackbar(trackbarName, windowName, value, count, onChange) -> None
             트랙바 이벤트 콜백 함수는 다음 형식을 따름.  
             onChange(pos) -> None  
 
-## [10 time_check.py : 연산 시간 측정 방법](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02/10%20time_check.py)
+## [10 time_check.py : 연산 시간 측정 방법](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch02%20OpenCV_Python%20기초%20사용법/10%20time_check.py)
 10 연산 시간 측정 방법  
 
 컴퓨터 비전은 대용량 데이터를 다루고, 일련 과정을 통해 최종 결과를 얻으므로 매 단계에서 연산 시간을 측정하여 관리할 필요가 있음.  
