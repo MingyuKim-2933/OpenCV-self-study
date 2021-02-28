@@ -18,8 +18,6 @@
 검정색으로 설정. (밝은 영역은 흰색)
 '''
 
-# 카툰 필터 카메라
-
 import sys
 import numpy as np
 import cv2
