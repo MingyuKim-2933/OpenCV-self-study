@@ -1,4 +1,4 @@
-# ch03 기본적인 영상 처리 기법
+# ch04 필터링
 
 ## [01 filtering : 필터링 이해하기](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch04%20%ED%95%84%ED%84%B0%EB%A7%81/filtering.py)
 01 필터링 이해하기
