@@ -31,7 +31,7 @@ cv2.filter2D(src, ddepth, kernel, dst=None, anchor=None, delta=None, borderType=
 - borderType: 가장자리 픽셀 확장 방식
 - dst: 출력 영상
 
-## [02 blurring.py : 블러링(1): 평균 값 필터](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch04%20%ED%95%84%ED%84%B0%EB%A7%81/blurring.py)
+## [02 blurring.py : 블러링(1) - 평균 값 필터](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch04%20%ED%95%84%ED%84%B0%EB%A7%81/blurring.py)
 02 블러링(1): 평균 값 필터
 
 평균 값 필터(Mean filter)  
