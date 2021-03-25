@@ -1,6 +1,6 @@
 # ch04 필터링
 
-## [01 filtering.py : 필터링 이해하기](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch04%20%ED%95%84%ED%84%B0%EB%A7%81/filtering.py)
+## [01 filtering.py : 필터링 이해하기](https://github.com/MingyuKim-2933/OpenCV-self-study/blob/main/ch04%20%ED%95%84%ED%84%B0%EB%A7%81/01%20filtering.py)
 01 필터링 이해하기
 
 영상의 필터링(image filtering)
