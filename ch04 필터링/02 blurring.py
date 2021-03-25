@@ -7,7 +7,7 @@
 - 영상에 평균 값 필터를 적용할 때 마스크 크기가 커질수록 평균 값 필터 결과가 더욱 부드러워짐(블러 효과가 많이 적용됨) -> 더 많은 연산량 필요!
 - 편한 블러링 방식이지만 퀄리티가 떨어지는 단점이 있다. (가우시안 필터가 퀄리티가 더 좋다.)
 
-기본적인 2D필터링
+기본적인 2D 필터링
 cv2.filter2D(src, ddepth, kernel, dst=None, anchor=None, delta=None, borderType=None) -> dst
 - src: 입력 영상 (uint8 타입을 자주 사용)
 - ddepth: 출력 영상 데이터 타입. (e.g) cv2.CV_8U, cv2.CV_32F, cv2.CV_64F (-1을 지정하면 src와 같은 타입의 dst 영상을 생성)
