@@ -1,4 +1,4 @@
-# OpenCV-self-study
+# OpenCV self study
 
 사용언어 : ```python```
 
